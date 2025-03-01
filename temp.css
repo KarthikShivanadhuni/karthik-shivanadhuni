@@ -130,14 +130,19 @@ nav ul li a:hover {
     background-color: #008c8c;
 }
 
-/* Tech Stack */
 .tech-stack {
-    margin-top: 50px;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
 }
 
 .tech-stack h2 {
-    font-size: 2.5em;
-    margin-bottom: 15px;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 .icons {
@@ -148,13 +153,16 @@ nav ul li a:hover {
 }
 
 .icons img {
-    width: 60px;
-    transition: transform 0.3s;
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .icons img:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
+    filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.2));
 }
+
 
 /* Projects */
 .projects {
