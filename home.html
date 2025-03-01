@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header>
+        <div class="logo">MyWebsite</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="sign.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to My Website</h1>
+        <p>Hello! My name is <strong>S. Karthik</strong>. I am a Computer Science Engineer.</p>
+        <p>Click below to view my resume:</p>
+        
+        <!-- Resume Link -->
+        <a href="file:///Users/karthikshivanadhuni/karthikresume%202.pdf" target="_blank">View Resume</a>
+
+        <br><br>
+        
+        <!-- Exit Button -->
+        <button onclick="exitWebsite()" class="btn exit-btn">logout</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function exitWebsite() {
+            if (confirm("Are you sure you want to exit?"))
+            <p> THANK YOU FOR VISITING </p> {
+                window.open('', '_self').close(); // Tries to close the browser tab
+                window.location.href = "login.html"; // Redirects to a blank page
+            }
+        }
+    </script>
+</body>
+</html>

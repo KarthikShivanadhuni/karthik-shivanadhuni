@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <div id="strengthMessage"></div> <!-- Password Strength Message -->
+
+            <button type="submit">Login</button>
+        </form>
+
+        <p>Don't have an account? <a href="sign.html">Sign Up</a></p>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get input values
+            const username = document.getElementById("username").value.trim();
+            const password = document.getElementById("password").value.trim();
+
+            // Retrieve users from localStorage
+            const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
+
+            // Check if user exists
+            const user = storedUsers.find(u => u.username === username);
+
+            if (user) {
+                // Validate Password Strength
+                if (!validatePassword(user.password)) {
+                    alert("Your password is weak. Please sign up with a stronger password.");
+                    window.location.href = "sign.html";
+                    return;
+                }
+
+                // Check if password matches
+                if (user.password === password) {
+                    alert("Login successful!");
+                    window.location.href = "temp.html";
+                } else {
+                    alert("Incorrect password. Please try again.");
+                }
+            } else {
+                alert("You don't have an account. Redirecting to Sign-Up page...");
+                setTimeout(() => {
+                    window.location.href = "sign.html";
+                }, 1000);
+            }
+        });
+
+        function validatePassword(password) {
+            // Check for at least one lowercase, one uppercase, one digit, one special character, and min length of 8
+            const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            return strongPasswordRegex.test(password);
+        }
+
+        // Password Strength Indicator
+        document.getElementById("password").addEventListener("input", function() {
+            const password = this.value;
+            const strengthMessage = document.getElementById("strengthMessage");
+
+            if (password.length < 6) {
+                strengthMessage.textContent = "Weak Password ❌";
+                strengthMessage.style.color = "red";
+            } else if (password.match(/(?=.*[A-Z])(?=.*\d)/)) {
+                strengthMessage.textContent = "Medium Strength ✅";
+                strengthMessage.style.color = "orange";
+            } else if (validatePassword(password)) {
+                strengthMessage.textContent = "Strong Password 💪";
+                strengthMessage.style.color = "green";
+            } else {
+                strengthMessage.textContent = "";
+            }
+        });
+    </script>
+</body>
+</html>

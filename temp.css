@@ -1,0 +1,511 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Body Styling */
+body {
+    background-color: #0a0a0a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #222;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 4px 6px rgba(0, 255, 204, 0.1);
+    z-index: 1000;
+}
+
+header h1 {
+    color: #00ffcc;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #00ffcc;
+}
+
+/* Terminal Style Intro */
+.terminal {
+    background: black;
+    padding: 15px;
+    width: 90%;
+    max-width: 600px;
+    margin: 80px auto 20px;
+    border-radius: 5px;
+    font-family: monospace;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+}
+
+#terminal-text {
+    color: #00ff00;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    border-right: 2px solid #00ff00;
+    animation: typing 3s steps(40) forwards, blink 0.7s infinite;
+}
+
+/* Animations */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* Hero Section */
+.hero {
+    margin-top: 50px;
+    padding: 40px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.highlight {
+    color: #00ffcc;
+}
+
+.btn {
+    background-color: #00ffcc;
+    padding: 12px 25px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 20px;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #008c8c;
+}
+
+/* Tech Stack */
+.tech-stack {
+    margin-top: 50px;
+}
+
+.tech-stack h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.icons img {
+    width: 60px;
+    transition: transform 0.3s;
+}
+
+.icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Projects */
+.projects {
+    margin-top: 50px;
+}
+
+.projects h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.project-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #222;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card a {
+    display: block;
+    margin-top: 10px;
+    color: #00ffcc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card a:hover {
+    color: #008c8c;
+}
+
+/* Contact */
+.contact {
+    margin-top: 50px;
+    padding: 20px;
+    background: #222;
+    border-radius: 10px;
+}
+
+.contact h2 {
+    font-size: 2.5em;
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    color: #00ffcc;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #008c8c;
+}
+
+/* Login & Sign Up Forms */
+.auth-container {
+    background: #222;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    margin: 50px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+.auth-container h2 {
+    margin-bottom: 20px;
+}
+
+.auth-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #00ffcc;
+    border-radius: 5px;
+    background: #333;
+    color: white;
+}
+
+.auth-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00ffcc;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.auth-container button:hover {
+    background-color: #009999;
+}
+
+.auth-container p {
+    margin-top: 10px;
+}
+
+.auth-container a {
+    color: #00ffcc;
+    text-decoration: none;
+}
+
+.auth-container a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+    .tech-stack h2,
+    .projects h2,
+    .contact h2 {
+        font-size: 2em;
+    }
+    .project-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 90%;
+    }
+    .auth-container {
+        width: 95%;
+    }
+}
+
+/* Header */
+header {
+    background-color: #222;
+    padding: 15px;
+}
+
+header h1 {
+    color: #00ffcc;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Terminal Style Intro */
+.terminal {
+    background: black;
+    padding: 10px;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 5px;
+    font-family: monospace;
+}
+
+#terminal-text {
+    color: #00ff00;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    border-right: 2px solid #00ff00;
+    animation: typing 3s steps(40) forwards, blink 0.7s infinite;
+}
+
+/* Animations */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* Hero Section */
+.hero {
+    margin-top: 30px;
+    padding: 40px;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+}
+
+.highlight {
+    color: #00ffcc;
+}
+
+.btn {
+    background-color: #00ffcc;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #009999;
+}
+
+/* Logout Message */
+#logout-message {
+    display: none;
+    color: #00ffcc;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* Tech Stack */
+.tech-stack {
+    margin-top: 50px;
+}
+
+.tech-stack h2 {
+    font-size: 2em;
+}
+
+.icons img {
+    width: 50px;
+    margin: 10px;
+}
+
+/* Projects */
+.projects {
+    margin-top: 50px;
+}
+
+.project-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: #222;
+    padding: 20px;
+    border-radius: 8px;
+    width: 200px;
+}
+
+.card a {
+    color: #00ffcc;
+}
+
+/* Blog */
+.blog {
+    margin-top: 50px;
+}
+
+/* Contact */
+.contact {
+    margin-top: 50px;
+    padding: 20px;
+    background: #222;
+}
+
+.social-links a {
+    color: #00ffcc;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Login & Sign Up Forms */
+.auth-container {
+    background: #222;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    margin: 50px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+.auth-container h2 {
+    margin-bottom: 20px;
+}
+
+.auth-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #00ffcc;
+    border-radius: 5px;
+    background: #333;
+    color: white;
+}
+
+.auth-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00ffcc;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.auth-container button:hover {
+    background-color: #009999;
+}
+
+.auth-container p {
+    margin-top: 10px;
+}
+
+.auth-container a {
+    color: #00ffcc;
+    text-decoration: none;
+}
+
+.auth-container a:hover {
+    text-decoration: underline;
+}
