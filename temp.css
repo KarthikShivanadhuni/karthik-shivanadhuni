@@ -145,6 +145,21 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
+.tech-stack {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.tech-stack h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
 .icons {
     display: flex;
     justify-content: center;
@@ -163,6 +178,29 @@ nav ul li a:hover {
     filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.2));
 }
 
+/* Style for file upload */
+.upload-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#imageUpload {
+    display: none;
+}
+
+.upload-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.upload-label:hover {
+    background-color: #0056b3;
+}
 
 /* Projects */
 .projects {
