@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="temp.css">
 </head>
 <body>
@@ -26,19 +25,11 @@
     <section class="hero">
         <h1>Welcome to <span class="highlight">My Portfolio</span></h1>
         <a href="#projects" class="btn">View Projects</a>
-        <!-- Resume Link -->
         <a href="https://drive.google.com/file/d/1zw55IM3iAKcMIKmRdXMqKp9H0sRf5wjy/view?usp=sharing" target="_blank" class="btn">View Resume</a>
         <br><br>
 
-        <!-- Exit Button -->
         <button onclick="logout()" class="btn exit-btn">Logout</button>
-
-        <!-- Logout Message (Initially Hidden) -->
-        <p id="logout-message" style="display: none; color: #00ffcc; font-size: 20px; margin-top: 10px;">Thank you for visiting my website!</p>
-
     </section>
-
-    
 
     <section class="projects" id="projects">
         <h2>Projects</h2>
@@ -62,19 +53,14 @@
         <div class="social-links">
             <a href="#">GitHub</a>
             <a href="#">LinkedIn</a>
-          
         </div>
     </section>
 
     <script>
         function logout() {
-            // Show the logout message
-            document.getElementById("logout-message").style.display = "block";
-
-            // Wait for 2 seconds before redirecting or closing
-            setTimeout(() => {
-                window.location.href = "login.html"; // Redirect to login page
-            }, 2000);
+            const newWindow = window.open('', '_self');
+            newWindow.document.write('<html><head><title>Goodbye</title></head><body style="display:flex; justify-content:center; align-items:center; height:100vh; background-color:#111; color:#00ffcc; font-size:24px;">Thank you for visiting my website</body></html>');
+            newWindow.document.close();
         }
     </script>
 
