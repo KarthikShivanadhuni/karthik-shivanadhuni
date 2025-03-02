@@ -13,6 +13,15 @@
             <label for="fullname">Full Name</label>
             <input type="text" id="fullname" name="fullname" required>
 
+            <label for="department">Department</label>
+            <input type="text" id="department" name="department" required>
+
+            <label for="year">Year</label>
+            <input type="number" id="year" name="year" min="1" max="4" required>
+
+            <label for="section">Section</label>
+            <input type="text" id="section" name="section" required>
+
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required>
 
@@ -38,7 +47,10 @@
 
             // Get input values
             const fullname = document.getElementById("fullname").value.trim();
-            const email = document.getElementById("email").value.trim();
+            const department = document.getElementById("department").value.trim();
+            const year = document.getElementById("year").value.trim();
+            const section = document.getElementById("section").value.trim();
+            
             const username = document.getElementById("username").value.trim();
             const password = document.getElementById("password").value.trim();
             const confirmPassword = document.getElementById("confirm-password").value.trim();
@@ -65,7 +77,7 @@
             }
 
             // Save user details in local storage
-            storedUsers.push({ fullname, email, username, password });
+            storedUsers.push({ fullname, department, year, section, email, username, password });
             localStorage.setItem("users", JSON.stringify(storedUsers));
 
             alert("Sign-up successful! Redirecting to Login page...");
